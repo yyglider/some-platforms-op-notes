@@ -1,0 +1,3 @@
+#!/bin/bash
+#in case file doesn't exist 
+/usr/sbin/ntpdate 133.100.11.8 > /dev/null

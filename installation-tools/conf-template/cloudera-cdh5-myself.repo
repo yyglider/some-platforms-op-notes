@@ -1,0 +1,4 @@
+[cloudera-cdh5-myself]
+name = Cloudera CDH, Version (Custom)
+baseurl = http://DX2/software/cloudera-cdh5
+gpgcheck = 0
