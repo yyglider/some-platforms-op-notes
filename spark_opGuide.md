@@ -1,14 +1,17 @@
-#spark操作
+spark操作
 
-#####启动spark
+启动spark
 在Master上执行
 > /home/software/spark/spark-1.4.0/sbin/start-all.sh
-#####关闭spark
+
+关闭spark
 > /home/software/spark/spark-1.4.0/sbin/stop-all.sh
-#####运行自带样例 
+
+运行自带样例 
 可以用 run-example 执行spark自带样例程序，如下：
 > ./bin/run-example org.apache.spark.examples.SparkPi
-#####交互运行
+
+交互运行
 > ./bin/spark-shell
 
 Spark Shell中已经默认将SparkContext类初始化为对象sc。用户代码如果需要用到，则直接应用sc即可，否则用户自己再初始化，就会出现端口占用问题，相当于启动两个上下文。
@@ -16,7 +19,7 @@ Spark Shell中已经默认将SparkContext类初始化为对象sc。用户代码�
 在使用spark-shell时，可以通过 –driver-class-path 选项来指定所依赖的jar文件，多个jar文件之间使用分号”:”分割。
 
 
-#####提交到集群
+提交到集群
 可以用 spark-submit 提交任务到集群执行，如下(这里我们指定了集群URL为spark standalone集群)：
 
 
