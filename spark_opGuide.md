@@ -61,5 +61,5 @@ spark应用程序的jar包 你的应用程序需要的参数(即main方法的参
 
 	spark中可以使用JdbcRDD从数据库中加载数据。spark会将数据从数据库中拷贝到集群各个节点，因此使用JdbcRDD会有初始的拷贝数据的开销。也可以考虑使用sqoop将数据从数据库中迁移到hdfs中，然后从hdfs中读取数据。
 
-#####将结果写入文本文件
+将结果写入文本文件
    rdd.saveAsTextFile()用于将RDD写入文本文件。spark会将传入该函数的路径参数作为目录对待，默认情况下会在对应目录输出多个文件，这取决于并行度。如果要将结果写入hdfs的一个文件中，可以这样：rdd.coalesce(1).saveAsTextFile("filename")
